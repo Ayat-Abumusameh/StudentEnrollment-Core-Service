@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Student Enrollment System</title>
+
+        <!-- ربط ملفات التنسيق من مجلد static/css تلقائياً -->
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/all.min.css">
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+    <body>
+
+        <div class="main-container">
+            <!-- hidden filed to save id when update -->
+            <input type="hidden" id="enrollmentId">
+
+            <div class="sidebar">
+                <div>
+                    <div class="sidebar-title">
+                        <i class="fa-solid fa-asterisk"></i> Enrollment System
+                    </div>
+
+                    <!-- input filed for student id -->
+                    <div class="mb-4">
+                        <label class="form-label-custom" for="studentId">STUDENT ID</label>
+                        <input type="text" id="studentId" class="form-control" placeholder="Enter Student ID">
+                    </div>
+
+                    <!-- input filed for course id-->
+                    <div class="mb-4">
+                        <label class="form-label-custom" for="courseId">COURSE ID</label>
+                        <input type="text" id="courseId" class="form-control" placeholder="Enter Course ID">
+                    </div>
+
+                    <!-- filed for choice date -->
+                    <div class="mb-4">
+                        <label class="form-label-custom" for="enrollmentDate">ENROLLMENT DATE</label>
+                        <input type="date" id="enrollmentDate" class="form-control">
+                    </div>
+                </div>
+
+                <!-- buttons control-->
+                <div>
+                    <div class="action-buttons">
+                        <button type="button" id="btnAdd" class="btn btn-custom-action">Add</button>
+                        <button type="button" id="btnUpdate" class="btn btn-custom-action">Update</button>
+                        <button type="button" id="btnDelete" class="btn btn-custom-action">Delete</button>
+                    </div>
+                    <button type="button" id="btnRefresh" class="btn btn-refresh">Refresh / View All</button>
+                </div>
+            </div>
+
+            <!-- area of table-->
+            <div class="content-area">
+                <table class="table table-custom">
+                    <thead>
+                    <tr>
+                        <th>Enrollment ID</th>
+                        <th>Student ID</th>
+                        <th>Course ID</th>
+                        <th>Enrollment Date</th>
+                    </tr>
+                    </thead>
+                    <tbody id="enrollmentTableBody">
+                    <!-- js will fill this table automatically from database -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- To link js files-->
+        <script src="/js/script.js"></script>
+    </body>
+</html>
