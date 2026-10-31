@@ -71,7 +71,7 @@ Stops container boundaries safely while fully retaining saved user logs and tabl
 docker-compose down
 # Or using Makefile shortcut:
 make stop
-```
+``` 
 
 ### Deep Environment Reset
 Wipes active containers, teardowns the backend virtual network configurations, and completely removes persistent data storage caches to reset the environment state:
